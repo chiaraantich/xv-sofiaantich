@@ -398,6 +398,7 @@
 
 #footer {
     width: 100vw;
+    padding-top: 20px;
     padding-bottom: 60px;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
@@ -410,4 +411,41 @@
 #footer img {
     margin-top: 10px;
     width: 150px;
+}
+
+@media (prefers-color-scheme: dark) {
+
+  #confirmar, #regalo, #footer {
+    background-color: rgb(255, 250, 239);
+    color: rgb(17, 17, 17);
+  }
+
+  .modal-contenido {
+    background: rgb(30, 30, 30);
+    color: rgb(255, 250, 239);
+  }
+
+  .boton {
+    border: 1px solid rgb(33, 33, 33);
+    color: rgb(255, 250, 239);
+    background-color: rgb(33, 33, 33);
+  }
+
+  .boton:hover {
+    background-color: rgb(255, 250, 239);
+    border-color: rgb(33, 33, 33);
+    color: rgb(33, 33, 33);
+}
+
+  .botondos {
+    background-color: rgb(17, 17, 17);
+    color: rgb(255, 250, 239);
+    border-color: rgb(255, 250, 239);
+  }
+
+  .boton:hover {
+    background-color: rgb(255, 250, 239);
+    border-color: rgb(17, 17, 17);
+    color: rgb(17, 17, 17);
+}
 }
