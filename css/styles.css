@@ -1,0 +1,413 @@
+:root {
+  color-scheme: light;
+}
+
+/* FUENTES */
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fuente/Montserrat-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PlayfairDisplay';
+    src: url('../fuente/PlayfairDisplay-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* AUDIO CONTROL */
+
+#audio-control {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.4);
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    backdrop-filter: blur(6px);
+    cursor: pointer;
+    z-index: 2000;
+}
+
+#audio-control img {
+    width: 25px;
+    height: 25px;
+}
+
+#audio-control:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+/* PORTADA */
+
+#portada {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../imagenes/fotosofiamovil.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'PlayfairDisplay', serif;
+    text-align: center;
+    color: rgb(221, 221, 221);
+    position: relative;
+}
+
+#portada h1 {
+    font-size: 5rem;
+    font-weight: 400;
+    letter-spacing: 10px;
+}
+
+#portada h2 {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    cursor: pointer;
+    animation: bounce 1.8s infinite;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translate(-50%, 0); }
+    50%       { transform: translate(-50%, 8px); }
+}
+
+@media (min-width: 768px) {
+    #portada {
+        background-image: url(../imagenes/fotosofiapc.jpg);
+    }
+
+    #portada h1 {
+        font-size: 6rem;
+    }
+}
+
+/* CUENTA REGRESIVA */
+
+#cuentaregresiva {
+    width: 100vw;
+    padding: 50px 20px;
+    background-image: url(../imagenes/fondocorazon.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: rgb(244, 237, 228);
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+#cuentaregresiva::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(6px);
+    z-index: 1;
+}
+
+#cuentaregresiva > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Títulos compartidos */
+.titulocuenta,
+#confirmar h2,
+#dresscode h2,
+#musica h2,
+#info h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+/* Timer */
+.timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.time-box {
+    text-align: center;
+}
+
+.time-box span {
+    font-size: 2.8rem;
+    font-weight: 300;
+    display: block;
+    letter-spacing: 2px;
+}
+
+.time-box p {
+    font-size: 0.7rem;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+    margin-top: 4px;
+}
+
+/* Mensaje final */
+#mensajeFinal {
+    margin-top: 30px;
+}
+
+#mensajeFinal h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#mensajeFinal p {
+    font-size: 1.1rem;
+}
+
+.oculto {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .timer {
+        gap: 55px;
+    }
+
+    .time-box span {
+        font-size: 4rem;
+    }
+
+    .time-box p {
+        font-size: 0.9rem;
+        letter-spacing: 2px;
+    }
+}
+
+/* SECCIONES BASE (tipografía y padding compartido) */
+
+#info, #confirmar, #dresscode, #musica, #regalo {
+    width: 100vw;
+    padding: 50px 10px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+
+/* Espaciado de párrafos compartido */
+#info p, #confirmar p, #musica p, #regalo p, #footer p, #dresscode p {
+    margin: 0 10px 12px 10px;
+}
+
+/* SECCION INFO */
+
+#info {
+    background-color: rgb(17, 17, 17);
+    color: rgb(251, 249, 228);
+}
+
+#info img {
+    width: 160px;
+    margin-bottom: 40px;
+}
+
+/* SECCION CONFIRMAR */
+
+#confirmar {
+    background-color: rgb(255, 250, 239);
+    color: rgb(33, 33, 33);
+}
+
+#confirmar img {
+    width: 330px;
+    margin-bottom: 30px;
+}
+
+/* SECCION DRESSCODE */
+
+#dresscode {
+    background-image: url(../imagenes/fondoflores.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: rgb(255, 250, 239);
+    position: relative;
+    overflow: hidden;
+}
+
+#dresscode::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+#dresscode * {
+    position: relative;
+}
+
+#dresscode h2 {
+    font-size: 28px;
+}
+
+#textomayor {
+    font-size: 24px;
+}
+
+#textomenor {
+    font-size: 20px;
+}
+
+/* SECCION MUSICA */
+
+#musica {
+    background-color: rgb(17, 17, 17);
+    color: rgb(255, 250, 239);
+}
+
+/* SECCION REGALO */
+
+#regalo {
+    background-color: rgb(255, 250, 239);
+    color: rgb(33, 33, 33);
+    padding-bottom: 50px;
+}
+
+/* Íconos compartidos */
+#dresscode img, #musica img, #regalo img {
+    height: 160px;
+    margin-bottom: 20px;
+}
+
+/* BOTONES */
+
+.boton {
+    margin-top: 20px;
+    padding: 20px;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 50px;
+    border: 1px solid rgb(33, 33, 33);
+    color: rgb(255, 250, 239);
+    background-color: rgb(33, 33, 33);
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background-color: rgb(255, 250, 239);
+    border-color: rgb(17, 17, 17);
+    color: rgb(17, 17, 17);
+    transition: 0.3s;
+}
+
+.botondos {
+    margin-top: 20px;
+    padding: 20px;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 50px;
+    border: 1px solid rgb(255, 250, 239);
+    color: rgb(255, 250, 239);
+    background-color: rgb(17, 17, 17);
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.botondos:hover {
+    background-color: rgb(255, 250, 239);
+    border-color: rgb(255, 250, 239);
+    color: rgb(17, 17, 17);
+    transition: 0.3s;
+}
+
+/* MODAL */
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-contenido {
+    font-family: 'Montserrat', sans-serif;
+    background: rgb(255, 250, 239);
+    color: rgb(51, 51, 51);
+    padding: 10px 30px 30px 30px;
+    border-radius: 15px;
+    position: relative;
+    max-width: 550px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    margin: 0 20px;
+}
+
+.modal h2 {
+    color: rgb(10, 30, 63);
+    margin-bottom: 6px;
+    margin-top: 20px;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.modal p {
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+.cerrar {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+/* FOOTER */
+
+#footer {
+    width: 100vw;
+    padding-bottom: 60px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 1.2rem;
+    background-color: rgb(255, 250, 239);
+    color: rgb(33, 33, 33);
+}
+
+#footer img {
+    margin-top: 10px;
+    width: 150px;
+}

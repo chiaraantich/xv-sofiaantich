@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light only">
+    <title>XV Sofía Antich</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/png" href="imagenes/iconoweb.png">
+</head>
+<body>
+    <audio id="reproductor" loop>
+        <source src="audio/disclosure.mp3" type="audio/mpeg">
+    </audio>
+    <button id="audio-control">
+        <img src="imagenes/iconoaudioon.png" id="icono-audio" alt="Audio">
+    </button>
+    <section id="portada">
+        <h1>SOFIA</h1>
+        <h2>MIS XV</h2>
+        <img src="imagenes/iconoscroll.png" class="scroll-down">
+    </section>
+    <section id="cuentaregresiva">
+        <h2 class="titulocuenta">Cuenta regresiva</h2>
+        <div class="timer">
+            <div class="time-box">
+                <span id="dias">00</span>
+                <p>DAYS</p>
+            </div>
+            <div class="time-box">
+                <span id="horas">00</span>
+                <p>HOURS</p>
+            </div>
+            <div class="time-box">
+                <span id="minutos">00</span>
+                <p>MINUTES</p>
+            </div>
+            <div class="time-box">
+                <span id="segundos">00</span>
+                <p>SECONDS</p>
+            </div>
+        </div>
+
+        <div id="mensajeFinal" class="oculto">
+            <h2>¡Es hoy!</h2>
+            <p>Te espero para festejar</p>
+        </div>
+    </section>
+    <section id="info">
+        <img src="imagenes/iconofiesta.png">
+        <h2>MI FIESTA</h2>
+        <p>Sabado 23 de Mayo de 2026 a las 21:30hs hasta las 04:30hs</p>
+        <p>Mira Eventos - Salón Florida. Av. Fuerza Aérea 2170, Córdoba Capital</p>
+        <p>Hace click en el botón y encontrá las indicaciones para llegar</p>
+        <a href="https://maps.app.goo.gl/Hx1kukRHdiykupBg6?g_st=iw" target="_blank">
+            <button class="botondos">COMO LLEGAR</button>
+        </a>
+    </section>
+    <section id="confirmar">
+        <img src="imagenes/iconomayo.png">
+        <h2>CONFIRMÁ TU ASISTENCIA</h2>
+        <p>¡Cuento con tu presencia!</p>
+        <p>Tenes tiempo de confirmar hasta el 23 de abril</p>
+        <a href="https://forms.gle/cCvL28jdXXowb71Q9" target="_blank">
+            <button class="boton">CONFIRMAR ASISTENCIA</button>
+        </a>
+    </section>
+    <section id="dresscode">
+        <img src="imagenes/iconoropa.png">
+        <h2>DRESS CODE</h2>
+        <p id="textomayor">Elegante</p>
+        <p id="textomenor">(evitar colores fríos)</p>
+    </section>
+    <section id="musica">
+        <img src="imagenes/iconomusica.png">
+        <h2>PLAYLIST</h2>
+        <p>¡Ayudame a armar mi playlist sugiriendo canciones que no pueden faltar!</p>
+        <a href="https://forms.gle/QUqkZoh9wEVkRPiM9" target="_blank">
+            <button class="botondos">SUGERIR CANCION</button>
+        </a>
+    </section>
+    <section id="regalo">
+        <img src="imagenes/iconoregalo.png">
+        <p>El mejor regalo es compartir este momento juntos,</p>
+        <p>pero si deseás hacerme un obsequio, podés colaborar con mis sueños e ilusiones</p>
+        <p>¡Muchas gracias!</p>
+        <button class="boton" id="abrirmodal">HACER UN REGALO</button>
+    </section>
+    <div id="modal" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar">&times;</span>
+            <h2>Datos Bancarios</h2>
+            <p>Nombre del titular: Sofía Antich</p>
+            <p>CBU: 0000003100052508165776</p>
+            <p>Alias: sofi.antich.paterno</p>
+
+            <h2>Buzón de regalos</h2>
+            <p>Si deseas hacerme tu regalo personalmente,</p>
+            <p>el día del evento habra un buzón para dejar obsequios</p>
+        </div>
+    </div>
+    <section id="footer">
+        <p>¡Gracias por acompañarme en este momento tan importante!</p>
+        <img src="imagenes/firma.png">
+    </section>
+
+    <script src="javascript/audiocontrol.js"></script>
+    <script src="javascript/scrolldown.js"></script>
+    <script src="javascript/contador.js"></script>
+    <script src="javascript/modal.js"></script>
+</body>
+</html>
