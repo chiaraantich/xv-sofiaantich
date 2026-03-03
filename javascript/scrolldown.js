@@ -1,6 +1,5 @@
 document.querySelector(".scroll-down").addEventListener("click", function() {
-    window.scrollTo({
-        top: window.innerHeight,
+    document.querySelector("#cuentaregresiva").scrollIntoView({
         behavior: "smooth"
     });
 });
