@@ -79,10 +79,10 @@
 
 .scroll-down {
     position: absolute;
-    bottom: 30px;
+    bottom: 110px;
     left: 50%;
     transform: translateX(-50%);
-    width: 60px;
+    width: 80px;
     cursor: pointer;
     animation: bounce 1.8s infinite;
     transition: transform 0.3s ease, opacity 0.3s ease;
