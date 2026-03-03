@@ -8,8 +8,8 @@
 }
 
 @font-face {
-    font-family: 'PlayfairDisplay';
-    src: url('../fuente/PlayfairDisplay-VariableFont_wght.ttf') format('truetype');
+    font-family: 'Soligant';
+    src: url('../fuente/Soligant.ttf') format('truetype');
     font-weight: 100 900;
     font-style: normal;
 }
@@ -60,14 +60,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: 'PlayfairDisplay', serif;
+    font-family: 'Soligant', serif;
     text-align: center;
     color: rgb(221, 221, 221);
     position: relative;
 }
 
 #portada h1 {
-    font-size: 5rem;
+    font-size: 5.5rem;
     font-weight: 400;
     letter-spacing: 10px;
 }
@@ -417,8 +417,8 @@
   }
 
   .modal-contenido {
-    background: rgb(30, 30, 30);
-    color: rgb(255, 250, 239);
+    background: rgb(255, 250, 239);
+    color: rgb(33, 33, 33);
   }
 
   .boton {
@@ -444,4 +444,16 @@
     border-color: rgb(17, 17, 17);
     color: rgb(17, 17, 17);
 }
+}
+
+.animar {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Estado cuando aparece */
+.animar.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
